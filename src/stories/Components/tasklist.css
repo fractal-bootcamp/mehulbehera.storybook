@@ -1,0 +1,17 @@
+.storybook-components-tasklist--default {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 0;
+    border-radius: 3em;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+  }
+  .storybook-tasklist--complete {
+    color: rgb(8, 103, 17);
+    background-color: #10ea5c;
+  }
+  .storybook-tasklist--incomplete {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+  }
