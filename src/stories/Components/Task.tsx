@@ -1,7 +1,7 @@
 import React from "react";
 import "../../index.css";
 
-interface TaskProps {
+export interface TaskProps {
   isComplete?: boolean;
   title: string;
   description: string;
@@ -12,17 +12,17 @@ export const Task = ({ isComplete, title, description }: TaskProps) => {
     ? ".storybook-task--complete"
     : ".storybook-task--incomplete";
   return (
-    <div className="flex items-start block max-w-sm p-6 bg-white border border-gray-100 rounded-lg shadow hover:bg-gray-100 dark:bg-white-100 dark:border-white-800 dark:hover:bg-white-800">
-      <div className="flex items-center h-5">
+    <div className="flex flex-row max-w-sm p-6 bg-white border border-gray-100 rounded-lg shadow hover:bg-gray-100 dark:bg-white-100 dark:border-white-800 dark:hover:bg-white-800">
+      <div className="flex align items-center">
         <input
           id="completebox"
           type="checkbox"
           value=""
-          className="w-12 h-12 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-green-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+          className="w-12 h-12 accent-green-500 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           required
         />
       </div>
-      <div className="flex flex-col justify-between p-4 leading-normal">
+      <div className="flex flex-col justify-between p-4">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-black-900 dark:text-black">
           {title}
         </h5>
