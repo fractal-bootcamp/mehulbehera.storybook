@@ -36,5 +36,3 @@ export function HeatGrid() {
     </div>
   );
 }
-
-//<div className="m-5 p-5 text-center h-20 w-20 bg-indigo-600"></div>

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
 
 import { Task } from "./Task";
 
@@ -24,11 +25,11 @@ const taskcomplete = {
 
 export const inComplete: Story = {
   args: {
-    task,
-    onToggle,
+    task: task,
+    onToggle: fn(),
   },
 };
 
 export const Complete: Story = {
-  args: { taskcomplete, onToggle },
+  args: { task: taskcomplete, onToggle: fn() },
 };

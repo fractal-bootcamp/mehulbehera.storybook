@@ -18,8 +18,9 @@ export const TaskList = ({ tasks }: TaskListProps) => {
   function updateTasks(idToChange: number) {
     //flip the iscompleted  variable
     const updatedTasks = updateableTasks.map((task, index) => {
+      console.log(task, idToChange);
       if (index === idToChange) {
-        return { ...task, isComplete: task.isComplete };
+        return { ...task, isComplete: !task.isComplete };
       }
       return task;
     });
@@ -39,7 +40,7 @@ export const TaskList = ({ tasks }: TaskListProps) => {
 
   return (
     <div>
-      {tasks.map((item, index) => {
+      {updateableTasks.map((item, index) => {
         return <Task task={item} onToggle={() => updateTasks(index)} />;
       })}
     </div>
