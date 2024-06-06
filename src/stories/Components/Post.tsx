@@ -1,4 +1,3 @@
-import { Url } from "url";
 import "../../index.css";
 
 //Needs -  name, time, image url, post description, likes, comments,
